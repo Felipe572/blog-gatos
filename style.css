@@ -17,45 +17,29 @@
     --color1:#387E96;
 }
 
-html {
-    font:  400 1.6rem/160% "Mulish", sans-serif;
-}
-
 body {
     font-size: 1.6rem;
     font-family: "Mulish", sans-serif;
     background-color: #ffffff;
-    width: 34.2rem;
 }
 
-header, nav {
+header {
     background-color: var(--color0);
+    padding: 1.5rem 2.8rem;
+}
+
+header > .menu-box {
+    max-width: 37.4rem;
+    margin-inline: auto;
+
     display: flex;
+    gap: 2.6rem;
     align-items: center;
-    gap: 2.4rem;
-    height: 7.2rem;
-    margin: auto;
-}
-
-header > form {
-    flex: 1;
-}
-
-nav {
-    padding: 2.4rem;
-    margin: auto;
-}
-
-.input-wrapper > label {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
 }
 
 .input-wrapper > input {
-    width: 30rem;
-    padding: 1.2rem;
+    font-family: "Mulish", sans-serif;
+    padding: 1.2rem 1.4rem;
 
     background-color: var(--color1);
     border: 0;
@@ -63,19 +47,53 @@ nav {
 
     font-size: 1.6rem;
     font-weight: 600;
-    opacity: 0.56;
+    line-height: 100%;
+
+    color: #ffffff;
 }
 
 .input-wrapper > input::placeholder {
     color: #ffffff;
 }
 
-#cat {
-    width: 43.4rem;
 
-    position: absolute;
-    width: 434px;
-    height: 219px;
-    left: calc(50% - 434px/2 - 2px);
-    top: 72px; 
+main {
+    padding-inline: 2rem;
+    max-width: 38.2rem;
+    margin-inline: auto;
+}
+
+main > img {
+    width: 100%;
+    height: auto;
+}
+main > h1 {
+
+    color: var(--color-title);
+    margin-top: 1.5rem;
+    margin-bottom: .9rem;
+
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+main > p {
+    margin-top: 3.2rem;
+
+    color: var(--color-p);
+}
+
+
+#like, #unlike {
+    all: unset;
+
+    transition: all 400ms;
+}
+
+#like:hover {
+    transform: scale(1.2) rotate(-15deg);
+}
+
+#unlike:hover {
+    transform: scale(1.2) rotate(15deg);
 }
