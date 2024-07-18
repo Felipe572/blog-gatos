@@ -11,16 +11,16 @@
 :root {
     font-size: 62.5%;
 
-    --color-title: #202024;
-    --color-p: #121214;
-    --color0: #065e7c;
-    --color1:#387E96;
+    --color-title: hsl(240, 6%, 13%);
+    --color-p: hsl(240, 5%, 7%);
+    --color0: hsl(195, 91%, 25%);
+    --color1:hsl(195, 46%, 40%);
 }
 
 body {
     font-size: 1.6rem;
     font-family: "Mulish", sans-serif;
-    background-color: #ffffff;
+    background-color: hsl(0, 0%, 100%);
 }
 
 header {
@@ -49,11 +49,11 @@ header > .menu-box {
     font-weight: 600;
     line-height: 100%;
 
-    color: #ffffff;
+    color: hsl(0, 0%, 100%);
 }
 
 .input-wrapper > input::placeholder {
-    color: #ffffff;
+    color: hsl(0, 0%, 100%);
 }
 
 .container {
@@ -141,8 +141,54 @@ article > img {
 
 footer {
     background-color: var(--color0);
-    color: #ffffff;
+    color: hsl(0, 0%, 100%);
     text-align: center;
     padding-block: 2.6rem;
     margin-top: 4rem;
+}
+
+@media (width > 80rem) {
+    #desktop {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "main aside"
+        "footer footer";
+    }
+
+    .menu-box,
+    .container {
+        max-width: initial;
+        margin-inline: initial;
+        padding: initial;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    header > .menu-box {
+        max-width: 76rem;
+        margin-inline: auto;
+    }
+
+    header > form {
+        flex: 1;
+    }
+
+    header > form > input {
+        width: 100%;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+    footer {
+        grid-area: footer;
+    }
 }
