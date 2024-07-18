@@ -6,26 +6,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
     font-size: 62.5%;
+
+    --color-title: #202024;
+    --color-p: #121214;
+    --color0: #065e7c;
+    --color1:#387E96;
+}
+
+html {
+    font:  400 1.6rem/160% "Mulish", sans-serif;
 }
 
 body {
     font-size: 1.6rem;
     font-family: "Mulish", sans-serif;
     background-color: #ffffff;
+    width: 34.2rem;
 }
 
 header, nav {
-    background-color: #065E7C;
+    background-color: var(--color0);
     display: flex;
     align-items: center;
     gap: 2.4rem;
     height: 7.2rem;
+    margin: auto;
 }
 
 header > form {
@@ -34,6 +43,7 @@ header > form {
 
 nav {
     padding: 2.4rem;
+    margin: auto;
 }
 
 .input-wrapper > label {
@@ -44,14 +54,28 @@ nav {
 }
 
 .input-wrapper > input {
-    width: 35rem;
-    padding: 1.6rem;
+    width: 30rem;
+    padding: 1.2rem;
 
-    background-color: var(--color-base-gray-100);
+    background-color: var(--color1);
     border: 0;
-    border-radius: .6rem;
+    border-radius: .4rem;
 
     font-size: 1.6rem;
     font-weight: 600;
     opacity: 0.56;
+}
+
+.input-wrapper > input::placeholder {
+    color: #ffffff;
+}
+
+#cat {
+    width: 43.4rem;
+
+    position: absolute;
+    width: 434px;
+    height: 219px;
+    left: calc(50% - 434px/2 - 2px);
+    top: 72px; 
 }
