@@ -37,13 +37,14 @@ header > .menu-box {
     align-items: center;
 }
 
-.input-wrapper > input {
+form > input {
     font-family: "Mulish", sans-serif;
     padding: 1.2rem 1.4rem;
 
     background-color: var(--color1);
     border: 0;
     border-radius: .4rem;
+    width: 100%;
 
     font-size: 1.6rem;
     font-weight: 600;
@@ -52,7 +53,7 @@ header > .menu-box {
     color: hsl(0, 0%, 100%);
 }
 
-.input-wrapper > input::placeholder {
+form > input::placeholder {
     color: hsl(0, 0%, 100%);
 }
 
@@ -148,16 +149,21 @@ footer {
 }
 
 @media (width > 80rem) {
+    img {
+        border-radius: .5rem;
+    }
     #desktop {
         display: grid;
         grid-template-areas: 
         "header header"
         "main aside"
         "footer footer";
+
+        gap: 4rem 3.2rem;
     }
 
-    .menu-box,
-    .container {
+    header .header,
+    .container { 
         max-width: initial;
         margin-inline: initial;
         padding: initial;
@@ -167,12 +173,17 @@ footer {
         grid-area: header;
     }
 
-    header > .menu-box {
-        max-width: 76rem;
+    header .header {
+        max-width: 121.6rem;
         margin-inline: auto;
     }
 
-    header > form {
+    header > .menu-box {
+        margin-inline: auto;
+        max-width: 120rem
+    }
+
+    header  form {
         flex: 1;
     }
 
@@ -184,8 +195,19 @@ footer {
         grid-area: main;
     }
 
+    main .container {
+        max-width: 70rem;
+        margin-left: 10rem;
+        margin-top: 3rem;
+    }
+
     aside {
         grid-area: aside;
+    }
+
+    aside .container {
+        margin-right: 35rem;
+        max-width: 40rem;
     }
 
     footer {
