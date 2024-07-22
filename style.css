@@ -214,3 +214,33 @@ footer {
         grid-area: footer;
     }
 }
+
+header {
+    animation: fromTop 500ms 150ms backwards;
+}
+
+@keyframes fromTop {
+    from {
+        transform: translateY(-100%);
+    }
+}
+
+main > img {
+    animation: fromImg 3s 450ms backwards;
+}
+
+@keyframes fromImg {
+    from {
+        transform: rotateY(360deg);
+    }
+}
+
+article > img {
+    animation: fromImg 3s 800ms backwards;
+}
+
+@keyframes fromImg {
+    from {
+        transform: rotateY(360deg);
+    }
+}
