@@ -195,10 +195,6 @@ footer {
         grid-area: main;
     }
 
-    main > img {
-        
-    }
-
     .main {
         max-width: 70rem;
         margin-left: 36rem;
