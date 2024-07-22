@@ -226,7 +226,7 @@ header {
 }
 
 main > img {
-    animation: fromImg 3s 450ms backwards;
+    animation: fromImg 1.5s 450ms backwards;
 }
 
 @keyframes fromImg {
