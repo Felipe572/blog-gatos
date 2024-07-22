@@ -195,9 +195,13 @@ footer {
         grid-area: main;
     }
 
-    main .container {
+    main > img {
+        
+    }
+
+    .main {
         max-width: 70rem;
-        margin-left: 10rem;
+        margin-left: 36rem;
         margin-top: 3rem;
     }
 
@@ -205,8 +209,8 @@ footer {
         grid-area: aside;
     }
 
-    aside .container {
-        margin-right: 35rem;
+    .aside {
+        margin-right: 36rem;
         max-width: 40rem;
     }
 
